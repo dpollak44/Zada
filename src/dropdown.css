@@ -1,0 +1,25 @@
+.theDropdown{
+    position: absolute;
+    z-index: 2;
+    list-style: none;
+    margin-left: 0 !important;
+    /* margin-top: 1em; */
+    border-radius: 10px;
+    text-align: left !important;
+    background: #00ace6;
+}
+
+
+
+ .theDropdown li a{
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 10em !important;
+    text-align: left !important;
+    color: white;
+    padding-bottom: 20px !important;
+}
+
+.theDropdown a:hover{
+background-color: lawngreen;
+}
