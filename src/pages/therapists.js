@@ -1,9 +1,9 @@
 import React from 'react';
-import './physicalTherapy.css';
+// import './bios.css';
 
 
 export default (props) => {
     return (
-        <h1>Physical Therapy</h1>
+        <h1>Therapists</h1>
     );
 }

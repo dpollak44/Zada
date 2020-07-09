@@ -1,9 +1,9 @@
 import React from 'react';
-import './nutrition.css';
+// import './bios.css';
 
 
 export default (props) => {
     return (
-        <h1>Nutrition</h1>
+        <h1>Location</h1>
     );
 }

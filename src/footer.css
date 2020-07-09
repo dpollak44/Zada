@@ -1,0 +1,47 @@
+.footer{
+    padding: 5rem;
+    height: 35rem;
+    width: 100%;
+    z-index: 2;
+    background-color: lightgrey;
+text-align: center;
+}
+
+#stuff{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+#infoLinks{
+    list-style: none;
+    text-transform: uppercase;
+    color: black;
+}
+
+#infoLinks a{
+
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#infoLinks li{
+
+margin: .5rem;
+}
+
+#writeReview h2{
+    font-size: 2rem;
+} 
+
+
+ #writeReview h2{
+    font-size: 2rem;
+} 
+
+#footerBottom{
+    /* background-color: rgb(39, 38, 38); */
+    text-align: justify;
+    height: 10rem;
+}

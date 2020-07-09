@@ -8,29 +8,33 @@
     padding: 0;
 }
 
-#nav li{
+#nav a{
     margin-left: 3em;
 
 }
 
 #nav a:hover {
-    background: #00ace6;
+    background: black;
+
     border-radius: 5px;
     color: white;
 
 }
 
-#nav a {
+/* #nav a {
     display: block;
     padding: 1em;
-  }
+  } */
 
 
     #nav a {
-        text-decoration: none;
+        font-size: larger;
+        color: black;
+        font-weight: bold;
+        padding: 1em;
         letter-spacing: .45rem;
-        padding: 0;
-        margin-right: 1em;
+
+
     }
 
     #nav{
@@ -38,8 +42,4 @@
         text-transform: uppercase;
     }
 
-    #nav li{
-        position: relative;
-        padding: 0;
-    }
 

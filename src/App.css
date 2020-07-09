@@ -1,13 +1,24 @@
+header{
+  position: fixed;
+  top: 0;
+  background-color: white;
+  z-index: 2;
+  width: 100%;
+  height: 11rem;
+}
+
 .flex-container  {
   margin:0;
   padding-right: 5em;
   padding-left: 5em;
   margin-top: 5em;
   margin-bottom: 5em;
-  height: 7em;
+  height: 3em;
   display: flex;
   justify-content: center;
   align-items: center;
+
+
       /* background: deepskyblue; */
 
 }
@@ -15,8 +26,28 @@
 .logo {
   margin: 0 20em 0 0;
 
+
 }
     .logo a {
       color: rgb(28, 24, 22);
       text-decoration: none;
+      font-size: 4em;
+
     }
+
+    #anchor1{
+      color: gray;
+    }
+
+    #anchor2{
+margin-left: 1em;
+    }
+
+.logo h5{
+  margin-top: 2px;
+  color: gray;
+}
+
+#contentMargin{
+  margin-top: 11rem;
+}

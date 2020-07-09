@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './home.css';
+import './services.css'
+
 import 'semantic-ui-css/semantic.min.css';
 
-import { Button } from 'semantic-ui-react';
+import { Transition, Button } from 'semantic-ui-react';
 
 
-export default () => {
+export default ({ infoSelectors, onDetailsDivDisplay, onSelectService }) => {
     // const [infoSelectors, setInfoSelectors] = useState(
     //     [
     //         {
@@ -50,65 +51,37 @@ export default () => {
     // };
 
 
-
     return (
-        <>
+        <div id="services">
+            <h2>SERVICES</h2>
+            <div id="photoGrid" className="container">
+                {infoSelectors.map(selector => <div className="selectorDiv"
+                    style={{ backgroundImage: `url(${selector.url})` }}
+                    key={selector.id}
+                    onMouseEnter={() => onDetailsDivDisplay(selector.id, true)}
+                    onMouseLeave={() => onDetailsDivDisplay(selector.id, false)}
+                >
 
-            <div id="content1">
-                <h2>ZADAREHAB IS AN INNOVATIVE PHYSICAL THERAPY AND WELLNESS CLINIC IN LAKEWOOD NJ</h2>
-                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit minus fugit molestiae, neque nihil vel,
-                quod,
-                incidunt ex repudiandae delectus voluptates dignissimos obcaecati impedit vitae sit maiores iure
-                exercitationem
-            unde.</h3>
+
+
+
+
+                    <Transition visible={selector.detailsDivDisplayed} animation='slide up' duration={500}>
+                        <div className="details">
+
+                            <h5>{selector.name}</h5>
+                            {/* <Link to={`/${selector.link}`}> <Button secondary>Details</Button></Link> */}
+                            <Link to="/service"> <Button onClick={() => onSelectService(selector.id)} secondary>Details</Button></Link>
+
+                        </div>
+
+                    </Transition>
+
+
+
+                </div>)}
             </div>
-            <div id="content2">
-                <div className="imageSpread"></div>
-                <div className="imageSpread"></div>
-                <div className="imageSpread"></div>
-
-            </div>
-
-            <div id="content3">
-                <div>
-                    <h2>HOW IT<br></br> WORKS</h2>
-                </div>
-                <div id="catchyPhraseContainer">
-                    <div className="catchyPhrases">
-                        <h4>Explore</h4>
-                        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit minus fugit molestiae, neque nihil vel,
-                        quod,
-                        incidunt ex repudiandae delectus voluptates dignissimos obcaecati impedit vitae sit maiores iure
-                exercitationem</h6>
-                    </div>
-                    <div className="catchyPhrases">
-                        <h4>Create</h4>
-                        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit minus fugit molestiae, neque nihil vel,
-                        quod,
-                        incidunt ex repudiandae delectus voluptates dignissimos obcaecati impedit vitae sit maiores iure
-                exercitationem</h6>
-                    </div>
-                    <div className="catchyPhrases">
-                        <h4>Design</h4>
-                        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit minus fugit molestiae, neque nihil vel,
-                        quod,
-                        incidunt ex repudiandae delectus voluptates dignissimos obcaecati impedit vitae sit maiores iure
-                exercitationem</h6>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-
-            <div id="appointment">
-                <p>START YOUR PATH TO WELLNESS</p>
-                <Button primary>REQUEST AN APPOINTMENT</Button>
-
-            </div>
-
-        </>
+        </div>
     );
 }
+
